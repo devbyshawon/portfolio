@@ -98,3 +98,19 @@ All sections accessible via:
 2. Navbar links (jump to section)
 3. Internal links (CTA buttons scroll to section)
 4. Mobile hamburger menu (same navigation)
+
+# HOW USERS MOVE through the site
+NAVBAR
+   ↓
+HERO ← Users land here, see CTA
+   ↓
+ABOUT ← Learn about you
+   ↓
+PROJECTS ← See your serious work (4 projects)
+   ↓
+SKILLS ← Understand depth
+   ↓
+CONTACT ← Take action (form or email)
+   ↓
+FOOTER
+
