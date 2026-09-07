@@ -8,17 +8,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary brand colors
         'primary': '#0F172A',      // Deep Blue
         'secondary': '#06B6D4',    // Cyan
         'accent': '#EA580C',       // Orange
-        
-        // Text colors
+
         'text-light': '#F1F5F9',       // Almost white
         'text-secondary': '#CBD5E1',   // Light gray
         'text-muted': '#94A3B8',       // Muted gray
         
-        // Background & utility
         'bg-subtle': '#1E293B',    // Subtle blue
         'border': '#334155',       // Border gray
         'success': '#10B981',      // Green
