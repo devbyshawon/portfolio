@@ -1,10 +1,11 @@
-import type { Metadata } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
-import './globals.css'
-import { ThemeProvider } from 'next-themes'
-
-import { siteMetadata } from './lib/seo'
-import { JsonLdPerson, JsonLdWebsite } from './components/common/JsonLd'
+import type { Metadata } from 'next';
+import { Inter, Space_Grotesk } from 'next/font/google';
+import './globals.css';
+import { ThemeProvider } from 'next-themes';
+import { siteMetadata } from './lib/seo';
+import { JsonLdPerson, JsonLdWebsite } from './components/common/JsonLd';
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,20 +27,29 @@ const RootLayout = ({
   children: React.ReactNode
 }) => {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning>
+      <head>
+        <JsonLdPerson />
+        <JsonLdWebsite />
+      </head>
+
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} 
         antialiased bg-primary text-text-light`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
+        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+          <Navbar />
 
-          <JsonLdPerson />
-          <JsonLdWebsite />
+          <main className='min-h-screen'>
+            {children}
+          </main>
+
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
   )
 };
 
-export { metadata, RootLayout };
+export { metadata };
+export default RootLayout;
