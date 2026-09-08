@@ -1,4 +1,3 @@
-// Project data - UPDATE WITH YOUR ACTUAL LINKS
 export const projects = [
   {
     id: 1,
